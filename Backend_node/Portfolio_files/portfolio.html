@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Personal Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css"> <!-- Include external stylesheet -->
+    <!-- Your other stylesheets -->
+    <style>
+        body {
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            font-family: Arial, sans-serif; /* Use Arial or fallback sans-serif font */
+            background-image: url(mypic3.jpg);
+            background-size:35cm;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+        }
+        .logo {
+            margin: 0;
+            font-size: 24px;
+        }
+        nav {
+            color: #fff;
+        }
+        nav a {
+            margin-right: 20px;
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        .body2 {
+            flex-direction: column;
+            height: 120vh;
+            padding: 40px 85px;
+            margin-top:40px;
+        }
+
+        .content {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            overflow-y: auto;
+        }
+
+        .portfolio-items {
+            display: grid;
+            grid-template-rows: repeat(auto-fit, minmax(30px, 1fr));
+        }
+        .portfolio-item i {
+            font-size: 48px;
+        }
+
+        .skills,
+        .programming-languages,
+        .other-skills {
+            margin-top: 20px;
+        }
+
+        .skills h2,
+        .programming-languages h2,
+        .other-skills h2 {
+            margin-bottom: 10px;
+        }
+
+        .skill-icons,
+        .programming-languages,
+        .other-skills {
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .skill,
+        .language {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill i,
+        .language i {
+            font-size: 24px;
+        }
+    </style>
+
+<body>
+
+    <header>
+        <h2 class="logo" id="n1" style="padding-left: 80px;padding-top: 7px;"><span>M</span>y Portfolio.</h2>
+        <nav class="navigation">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./portfolio.html">Portfolio</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+        <a href="#" class="btn-talk">Let's Talk</a>
+    </header>
+
+    <section class="body2">
+        <div class="content body1-content">
+            <h2 class="logo" id="n1"><span>T</span>ech Field.</h2>
+            <div class="portfolio-items">
+                <!-- Portfolio items -->
+                <div class="portfolio-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Web Development</h3>
+                    <p style="width: 400px;">I am an intermediate level Web developer with HTML,CSS,JS for frontend and also I am a intermidiate level developer with Django(Python)</p>
+                </div>
+                <div class="portfolio-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile App Development</h3>
+                    <p style="width: 400px;">I have experience working Android, I am adept at utilizing programming languages such Kotlin and Java to build robust and scalable applications. </p>
+                </div>
+            </div>
+            <div class="skills">
+                <!-- Skills -->
+                <h2 class="logo" id="n1"><span>S</span>kills.</h2>
+                <div class="skill-icons">
+                    <div class="skill">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-css3"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-python"></i>
+                        <span>Django</span>
+                    </div>
+                </div>
+            </div>
+            <div class="programming-languages">
+                <!-- Programming languages -->
+                <h2 class="logo" id="n1"><span>L</span>anguages Known.</h2>
+                <div class="language">
+                    <i class="fas fa-code"></i>
+                    <span>Python</span>
+                </div>
+                <div class="language">
+                    <i class="fas fa-code"></i>
+                    <span>C</span>
+                </div>
+                <div class="language">
+                    <i class="fas fa-code"></i>
+                    <span>Java</span>
+                </div>
+            </div>
+            <div class="other-skills">
+                <!-- Other skills -->
+                <h2 class="logo" id="n1"><span>O</span>ther Skills.</h2>
+                <div class="skill">
+                    <i class="fas fa-users"></i>
+                    <span>Team Worker</span>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-comments"></i>
+                    <span>Communication</span>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Smart Worker</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

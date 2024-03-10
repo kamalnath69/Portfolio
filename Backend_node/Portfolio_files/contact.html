@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Personal Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css"> <!-- Include external stylesheet -->
+    <!-- Your other stylesheets -->
+    <style>
+        .body1-content {
+            background-color: #f3f3f3;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 251, 251, 0.1);
+            max-width: 500px;
+        }
+        .body1{
+            padding: 24px 85px;
+        }
+
+        .body1-content h2 {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .body1-content p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .body1-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .body1-content li {
+            margin-bottom: 8px;
+            color: #666;
+            display: flex;
+        }
+
+        .body1-content li .icon {
+            margin-right: 10px;
+            font-size: 24px;
+        }
+
+        .body1-form {
+            margin-top: 20px;
+        }
+
+        .body1-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .body1-form input[type="text"],
+        .body1-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .body1-form input[type="submit"] {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 35px;
+            background: #7d2ae8;
+            border-radius: 10px;
+            border: 2px solid #7d2ae8;
+            font-weight: 500;
+            transition: .3s;
+        }
+
+        .body1-form input[type="submit"]:hover {
+            color: #7d2ae8;
+            background: transparent;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2 class="logo" id="n1"><span>K</span>amal.</h2>
+        <nav class="navigation">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./portfolio.html">Portfolio</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+        <a href="#" class="btn-talk">Let's Talk</a>
+    </header>
+
+    <section class="body1">
+        <div class="content body1-content">
+            <h2 class="logo" id="n1"><span>C</span>ontact Me.</h2>
+            <p>Feel free to get in touch with me via the following channels:</p>
+            <ul>
+                <li><i class="fas fa-phone-alt icon"></i> Phone: +91 97878 67648</li>
+                <li><i class="far fa-envelope icon"></i> Email: kamalnath9669@gmail.com</li>
+                <li><i class="fab fa-whatsapp icon"></i> WhatsApp: +91 75986 11885</li>
+            </ul>
+            <form class="body1-form" action="/submit-form" method="post">
+                <label for="message">Share something:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </section>
+
+</body>
+
+</html>
