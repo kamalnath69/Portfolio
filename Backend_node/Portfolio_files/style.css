@@ -151,56 +151,40 @@ header {
 }
 
 @media only screen and (max-width: 600px) {
-    header {
-        padding: 20px 5%; /* Adjusted padding for smaller screens */
-    }
-
     .logo {
-        font-size: 1.5em; /* Adjusted font size for smaller screens */
+        font-size: 1.2em;
     }
 
     .navigation {
-        display: none; /* Hide navigation links on smaller screens */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #f8f8f8;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        overflow: hidden;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
     }
 
-    .btn-talk {
-        padding: 8px 15px; /* Adjusted padding for smaller screens */
-        font-size: 0.8em; /* Adjusted font size for smaller screens */
+    #toggle-nav:checked + .navigation {
+        transform: translateY(0);
     }
 
-    .body1 {
-        padding: 20px 5%; /* Adjusted padding for smaller screens */
+    .navigation ul {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .content {
-        max-width: 100%; /* Adjusted max-width for smaller screens */
+    .navigation li {
+        margin: 10px 0;
     }
 
-    .content h2 {
-        font-size: 2.5em; /* Adjusted font size for smaller screens */
-    }
-
-    .content h4 {
-        font-size: 1.5em; /* Adjusted font size for smaller screens */
-    }
-
-    .content p {
-        padding: 10px 0 20px 0; /* Adjusted padding for smaller screens */
-        font-size: 0.9em; /* Adjusted font size for smaller screens */
-    }
-
-    .btn-group a {
-        padding: 8px 15px; /* Adjusted padding for smaller screens */
-        font-size: 0.8em; /* Adjusted font size for smaller screens */
-    }
-
-    .social-icons {
-        bottom: 10%; /* Adjusted bottom position for smaller screens */
-        left: 50%; /* Centered social icons horizontally */
-        transform: translateX(-50%);
-    }
-
-    .social-icons a {
-        margin-right: 5px; /* Adjusted margin for smaller screens */
+    .toggle-nav {
+        display: block;
     }
 }
