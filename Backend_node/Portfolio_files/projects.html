@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h2 class="logo" id="n1"><span>K</span>amal.</h2>
+        <nav class="navigation">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./portfolio.html">Portfolio</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+        <a href="./contact.html" class="btn-talk">Let's Talk</a>
+        <style>
+            body {
+                
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: Arial, sans-serif; /* Use Arial or fallback sans-serif font */
+    background-image: url(p1.jpg);
+    background-size: 45cm;
+    background-repeat: no-repeat;
+    background-position-x: left;/* Align background image to the right */
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar width */
+    height: 0; /* Remove scrollbar height */
+}
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+        }
+        .logo {
+            margin: 0;
+            font-size: 24px;
+        }
+        nav {
+            color: #fff;
+        }
+        nav a {
+            margin-right: 20px;
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        .body2 {
+            display: flex;
+            width: 720px;
+            flex-direction: column;
+            height: 90vh;
+            padding: 40px 85px;
+            margin-top:40px;
+        }
+
+        .content {
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            overflow-y: auto;
+        }
+
+        .portfolio-items {
+            display: grid;
+            grid-template-rows: repeat(auto-fit, minmax(30px, 1fr));
+        }
+        .portfolio-item i {
+            font-size: 48px;
+        }
+
+        .skills,
+        .programming-languages,
+        .other-skills {
+            margin-top: 20px;
+        }
+
+        .skills h2,
+        .programming-languages h2,
+        .other-skills h2 {
+            margin-bottom: 10px;
+        }
+
+        .skill-icons,
+        .programming-languages,
+        .other-skills {
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .skill,
+        .language {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill i,
+        .language i {
+            font-size: 24px;
+        }
+    </style>
+    </header>
+
+    <section class="body2">
+        <div class="content">
+            <h2 class="logo" id="n1"><span>P</span>rojects.</h2>
+            <ul>
+                <li>
+                    <h3>Social Media Application</h3>
+                    <p>A social media platform allowing users to connect, share posts, and interact with each other. Features include user authentication, posting, commenting, liking, and following other users. Built using the MERN stack (MongoDB, Express.js, React.js, Node.js).</p>
+                    <p><strong>Tech stack:</strong> MERN (MongoDB, Express.js, React.js, Node.js)</p>
+                <li>
+                    <h3>Expense Tracker</h3>
+                    <p>An application to track personal or business expenses, manage budgets, and generate reports. Features include adding, editing, and deleting expenses, categorizing expenses, setting budgets, and generating financial reports. Built using the MERN stack (MongoDB, Express.js, React.js, Node.js).</p>
+                    <p><strong>Tech stack:</strong> MERN (MongoDB, Express.js, React.js, Node.js)</p>
+                </li>
+                <li>
+                    <h3>Fake News Detector</h3>
+                    <p>A tool to identify and flag potentially fake or misleading news articles using natural language processing techniques. Features include analyzing text content, detecting patterns, and providing a confidence score for the likelihood of the news being fake. Built using Python and various NLP libraries.</p>
+                    <p><strong>Tech stack:</strong> Python (Natural Language Processing libraries)</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
