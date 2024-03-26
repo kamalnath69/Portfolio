@@ -25,7 +25,7 @@ app.post('/submit-form', async (req, res) => {
     
     await newMessage.save();
     console.log('Form submitted successfully:', newMessage);
-    res.status(200).send('Form submitted successfully');
+    res.redirect('/contact.html'); 
   } catch (error) {
     console.error('Error submitting form:', error);
     res.status(500).send('Error submitting form');

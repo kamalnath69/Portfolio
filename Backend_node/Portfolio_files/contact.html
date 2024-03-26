@@ -17,7 +17,8 @@
             box-shadow: 0 0 10px rgba(255, 251, 251, 0.1);
             max-width: 500px;
         }
-        .body1{
+
+        .body1 {
             padding: 24px 85px;
         }
 
@@ -82,6 +83,19 @@
             color: #7d2ae8;
             background: transparent;
         }
+
+        .toast-message {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            z-index: 9999;
+        }
     </style>
 </head>
 
@@ -107,13 +121,45 @@
                 <li><i class="far fa-envelope icon"></i> Email: kamalnath9669@gmail.com</li>
                 <li><i class="fab fa-whatsapp icon"></i> WhatsApp: +91 75986 11885</li>
             </ul>
-            <form class="body1-form" action="/submit-form" method="post">
+            <form class="body1-form" id="contact-form" method="post">
                 <label for="message">Share something:</label>
                 <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
                 <input type="submit" value="Send Message">
             </form>
+            <div id="toast-message" class="toast-message"></div>
         </div>
     </section>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', async (event) => {
+            event.preventDefault(); // Prevent default form submission
+
+            const formData = new FormData(event.target);
+            const message = formData.get('message');
+
+            try {
+                const response = await fetch('/submit-form', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ message }),
+                });
+
+                if (response.ok) {
+                    document.getElementById('toast-message').innerText = 'Message Sent';
+                    document.getElementById('toast-message').style.display = 'block';
+                    setTimeout(() => {
+                        document.getElementById('toast-message').style.display = 'none';
+                    }, 3000); // Hide toast message after 3 seconds
+                } else {
+                    console.error('Form submission failed:', response.statusText);
+                }
+            } catch (error) {
+                console.error('Error submitting form:', error);
+            }
+        });
+    </script>
 
 </body>
 
