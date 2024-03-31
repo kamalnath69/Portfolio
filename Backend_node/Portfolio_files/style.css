@@ -369,6 +369,7 @@ header {
     .social-icons {
         text-align: center;
         bottom:2%;
+        position: fixed;
     }
 
     .social-icons a {
