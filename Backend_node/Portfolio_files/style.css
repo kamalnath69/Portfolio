@@ -163,41 +163,224 @@ header {
 }
 
 
-@media only screen and (max-width: 600px) {
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 20px 30px;
+    }
+
+    .navigation {
+        margin-left: 0;
+    }
+
+    .navigation a {
+        font-size: 1em;
+        margin-right: 20px;
+    }
+
+    .logo {
+        font-size: 1.5em;
+    }
+
+    .btn-talk {
+        padding: 6px 25px;
+    }
+
+    .body1 {
+        padding: 20px;
+    }
+
+    .content {
+        max-width: none;
+    }
+
+    .content h2 {
+        font-size: 2.5em;
+    }
+
+    .content h4 {
+        font-size: 1.5em;
+    }
+
+    .content p {
+        font-size: 1em;
+    }
+
+    .btn-group a {
+        padding: 8px 25px;
+        font-size: 0.9em;
+    }
+
+    .btn-group a:nth-child(2) {
+        margin-left: 20px;
+    }
+
+    .social-icons {
+        bottom: 30px;
+    }
+
+    .social-icons a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-right: 15px;
+    }
+}
+
+/* Adjustments for Very Small Screens */
+@media only screen and (max-width: 480px) {
     .logo {
         font-size: 1.2em;
     }
 
+    .content h2 {
+        font-size: 2em;
+    }
+
+    .content h4 {
+        font-size: 1.3em;
+    }
+
+    .content p {
+        font-size: 0.9em;
+    }
+
+    .btn-group a {
+        padding: 6px 20px;
+        font-size: 0.8em;
+    }
+
+    .social-icons a {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        margin-right: 10px;
+    }
+}
+
+/* Further Adjustments for Ultra Small Screens */
+@media only screen and (max-width: 360px) {
+    .logo {
+        font-size: 1em;
+    }
+
+    .content h2 {
+        font-size: 1.8em;
+    }
+
+    .content h4 {
+        font-size: 1.2em;
+    }
+
+    .content p {
+        font-size: 0.8em;
+    }
+
+    .btn-group a {
+        padding: 5px 15px;
+        font-size: 0.7em;
+    }
+
+    .social-icons a {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        margin-right: 8px;
+    }
+}
+/* Mobile Styles */
+/* Mobile Styles */
+@media only screen and (max-width: 340px) {
+    header {
+        padding: 15px;
+    }
+    /* Adjust navigation styles for mobile */
     .navigation {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 0.8em;
         position: fixed;
         top: 0;
         left: 0;
+        background: #fff;
         width: 100%;
-        height: 100vh;
-        background-color: #f8f8f8;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 10;
-        overflow: hidden;
-        transform: translateY(-100%);
-        transition: transform 0.3s ease-in-out;
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 998; /* Ensure navigation appears above everything */
     }
 
-    #toggle-nav:checked + .navigation {
-        transform: translateY(0);
+    .navigation a {
+        margin-right: 0;
+        margin-left: 10px;
+        margin-bottom: 10px;
     }
 
-    .navigation ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navigation li {
-        margin: 10px 0;
-    }
-
-    .toggle-nav {
+    /* Show navigation when hamburger menu is clicked */
+    .navigation.active ul {
         display: block;
+    }
+    .logo {
+        display: none;
+        margin-bottom: 10px;
+        margin-top:30px;
+    }
+
+    .btn-talk {
+        position:fixed;
+        bottom: 25px;
+        right: 20px;
+        font-size: 0.7em;
+        padding: 4px 15px;
+    }
+
+    .body1 {
+        padding-left: 15px;
+    }
+
+    .content {
+        max-width: none;
+    }
+
+    .content h2 {
+        font-size: 1.7em;
+    }
+
+    .content h4 {
+        font-size: 1.2em;
+    }
+
+    .content p {
+        font-size: 1em;
+        margin-bottom:40% ;
+    }
+
+    .btn-group {
+        text-align: center;
+        margin-top: 20px;
+        margin: bottom 20px;
+    }
+
+    .btn-group a {
+    
+        width: 45%;
+        padding: 6px 15px;
+        font-size: 0.65em;
+        margin-bottom: 10px;
+    }
+
+    .btn-group a:nth-child(2) {
+        margin-left: 0;
+    }
+
+    .social-icons {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .social-icons a {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        margin: 0 5px;
     }
 }
