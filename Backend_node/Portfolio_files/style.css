@@ -161,7 +161,9 @@ header {
     border-radius: 5px;
     z-index: 9999;
 }
-
+#profile-picture{
+    display: none;
+}
 
 
 /* Mobile Styles */
