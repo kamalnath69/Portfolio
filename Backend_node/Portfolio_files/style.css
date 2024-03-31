@@ -163,6 +163,7 @@ header {
 }
 
 
+
 /* Mobile Styles */
 @media only screen and (max-width: 768px) {
     header {
@@ -381,4 +382,11 @@ header {
     .body1-content {
         max-width: 500px;
     }
+#profile-picture{
+    margin-top:30%;
+    margin-left:82%;
+    width: 70px;
+    height:70px;
+    border-radius: 50%; /* Ensures the image remains circular */
+}
 }
