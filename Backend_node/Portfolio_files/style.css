@@ -224,70 +224,9 @@ header {
     }
 }
 
-/* Adjustments for Very Small Screens */
-@media only screen and (max-width: 480px) {
-    .logo {
-        font-size: 1.2em;
-    }
-
-    .content h2 {
-        font-size: 2em;
-    }
-
-    .content h4 {
-        font-size: 1.3em;
-    }
-
-    .content p {
-        font-size: 0.9em;
-    }
-
-    .btn-group a {
-        padding: 6px 20px;
-        font-size: 0.8em;
-    }
-
-    .social-icons a {
-        width: 25px;
-        height: 25px;
-        line-height: 25px;
-        margin-right: 10px;
-    }
-}
-
 /* Further Adjustments for Ultra Small Screens */
-@media only screen and (max-width: 450px) {
-    .logo {
-        font-size: 1em;
-    }
-
-    .content h2 {
-        font-size: 1.8em;
-    }
-
-    .content h4 {
-        font-size: 1.2em;
-    }
-
-    .content p {
-        font-size: 0.8em;
-    }
-
-    .btn-group a {
-        padding: 5px 15px;
-        font-size: 0.7em;
-    }
-
-    .social-icons a {
-        width: 20px;
-        height: 20px;
-        line-height: 20px;
-        margin-right: 8px;
-    }
-}
 /* Mobile Styles */
-/* Mobile Styles */
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 480px) {
     header {
         padding: 15px;
     }
