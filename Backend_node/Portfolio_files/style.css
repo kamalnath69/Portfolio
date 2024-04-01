@@ -161,6 +161,11 @@ header {
     border-radius: 5px;
     z-index: 9999;
 }
+@media only screen and (min-width: 481px) {
+    #img1 {
+        display: none; /* Hide the profile picture for screen widths greater than 480px */
+    }
+}
 /* Mobile Styles */
 @media only screen and (max-width: 768px) {
     header {
