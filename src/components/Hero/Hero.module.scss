@@ -1,0 +1,116 @@
+@import '../../styles/contants.scss';
+
+.wrapper {
+  overflow: hidden; 
+
+  .container {
+    position: relative;
+    z-index: 1;
+
+    .upperElements {
+      @media (max-width: $sm) {
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .typingEffect {
+        display: block;
+        font-size: 2rem;
+        color: #00bfa5;
+        margin-top: 10px;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .lowerElements {
+      @media (max-width: $sm), (max-width: $md) {
+        margin-top: 4rem;
+        gap: 2rem;
+        justify-content: center;
+      }
+      margin-top: 12rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .experience {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        > :nth-child(2) {
+          line-height: 25px;
+        }
+      }
+
+      .certificate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          margin-bottom: 1rem;
+          width: 8.5rem;
+        }
+      }
+    }
+
+    .person {
+      @media (max-width: $sm), (max-width: $md) {
+        position: relative;
+        left: 0;
+        background-size: 21rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-position: bottom center;
+      }
+      @media  (max-width: $md){
+        background-size: 28rem;
+      }
+      position: absolute;
+      bottom: -2rem;
+      left: 33%;
+      transform: translateX(-50%);
+      background-image: url("../splash5.png");
+      background-repeat: no-repeat;
+      background-size: 30rem;
+      background-position: center;
+
+      img {
+        @media (max-width: $sm) {
+          width: 18rem;
+        }
+        width: 28rem;
+        margin-bottom: -5px;
+      }
+    }
+
+    .contactInfo {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      @media (max-width: $sm), (max-width: $md) {
+        margin-top: 4rem;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .email {
+        font-weight: bold;
+        font-size: 1rem;
+        gap: 2rem;
+        color: #0D2F3F;
+        @media (max-width: $sm) {
+          display: block;
+        }
+      }
+    }
+  }
+}
