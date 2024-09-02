@@ -13,7 +13,7 @@ const BuyMeACoffee = ({ closeModal }) => {
         <img src="/bmc_qr.png" alt="QR Code" className={css.qrCode} />
         <p className={css.modalText}>Scan the QR code or click below to support me!</p>
         <button className={css.redirectButton} onClick={handleRedirection}>
-          Donate Now
+          Support Now
         </button>
       </div>
     </div>

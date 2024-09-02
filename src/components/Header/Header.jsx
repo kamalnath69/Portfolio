@@ -16,10 +16,8 @@ const Header = () => {
   useOutsideAlerter({
     menuRef,
     setMenuOpened,
-    menuOpened, 
   });
 
-  const toggleMenu = () => setMenuOpened((prev) => !prev);
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
 
@@ -36,7 +34,7 @@ const Header = () => {
         <div className={`innerWidth ${css.container}`}>
           <div className={css.name}>
             <img src="/vkLogo.png" alt="Logo" className={css.logo} />
-            Kamal
+            Kamal Nath
           </div>
           <ul
             className={`flexCenter ${css.menu}`}
@@ -56,9 +54,9 @@ const Header = () => {
             Buy Me a Coffee
           </button>
           <div
-            className={css.menuIcon}
-            onClick={toggleMenu}
-          >
+          className={css.menuIcon}
+          onClick={() => setMenuOpened((prev) => !prev)}
+        >
             <BiMenuAltRight size={30} />
           </div>
         </div>

@@ -9,17 +9,17 @@
   background-color: $primary;
 
   .container {
+    position: relative;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    justify-content: space-between;
     font-weight: 500;
 
     .name {
-      display: flex;
-      align-items: center;
       font-size: 1.5rem;
       font-weight: 500;
+      display: flex;
+      align-items: center;
 
       .logo {
         width: 30px;
@@ -30,16 +30,35 @@
 
     .menu {
       display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      list-style: none;
+      justify-content: center;
+      flex: 1; /* This makes the ul take up available space */
 
-      @media (max-width: $md) {
-        display: none;
+      @media (max-width: $sm), (max-width: $md) {
+        position: absolute;
+        list-style: none;
+        gap: 2rem;
+        font-weight: 500;
+        flex-direction: column;
+        right: 0;
+        top: 3rem;
+        height: calc(100vh - 6.3rem);
+        width: 50%;
+        min-width: 15rem;
+        background: white;
+        padding: 2rem;
+        display: flex;
+        border-radius: 10px;
+        transition: all 200ms ease;
+        align-items: flex-start;
+        padding: 3rem;
+        justify-content: flex-start;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
       }
 
       text-transform: uppercase;
       font-size: 1rem;
+      list-style: none;
+      gap: 1.5rem;
       cursor: pointer;
 
       li {
@@ -54,9 +73,8 @@
       }
 
       .phone {
-        display: flex;
-        align-items: center;
         gap: 1.2rem;
+        flex-wrap: wrap;
 
         svg {
           color: $secondary;
@@ -77,9 +95,9 @@
     }
 
     .buyMeCoffee {
-      margin-left: auto;
+      margin-left: auto; /* Aligns button to the right */
       padding: 0.5rem 1rem;
-      background-color:$secondary ;
+      background-color: $secondary;
       color: white;
       border: none;
       border-radius: 5px;
