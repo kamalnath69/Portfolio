@@ -1,10 +1,11 @@
-import React from "react";
+import {React,useState} from "react";
 import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 import css from "./Hero.module.scss";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
+  const [showPopup, setShowPopup] = useState(false);
   return (
     <section className={`paddings ${css.wrapper}`}>
       <motion.div
@@ -46,6 +47,16 @@ const Hero = () => {
             src="./person.png"
             alt="Kamal Nath"
           />
+          <button
+            className="popup-trigger"
+            onMouseEnter={() => setShowPopup(true)}
+            onMouseLeave={() => setShowPopup(false)}
+          ></button>
+          {showPopup && (
+            <div className="popup">
+              Sorry, ignore this and see my skills.
+            </div>
+          )}
         </motion.div>
 
         <div className={css.contactInfo}>

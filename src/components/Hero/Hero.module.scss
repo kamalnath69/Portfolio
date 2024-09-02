@@ -91,6 +91,35 @@
       }
     }
 
+    .popup-trigger {
+      position: absolute;
+      top: 60%; /* Adjust the position based on the issue area */
+      left: 45%; /* Adjust the position based on the issue area */
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+    }
+    
+    .popup {
+      position: absolute;
+      top: 50%; /* Adjust position */
+      left: 50%; /* Adjust position */
+      transform: translate(-50%, -50%);
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+    
+    .popup-trigger:hover ~ .popup,
+    .popup-trigger:focus ~ .popup {
+      display: block;
+    }
+
     .contactInfo {
       display: flex;
       flex-direction: column;
