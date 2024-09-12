@@ -23,34 +23,58 @@ export const projectExperience = [
 ];
 
 export const WhatDoIHelp = [
-  "I will help you find solutions and solve your problems. We use process design to create digital products, and I also assist in improving your business.",
-  "We focus on developing scalable and maintainable applications tailored to your business needs.",
-  "From the backend to the frontend, I ensure a seamless user experience through modern technologies and best practices.",
+  "I’m Kamal Nath, a dedicated software developer with expertise in full-stack development, particularly using the MERN stack. I build scalable, secure, and user-friendly web and mobile applications with a strong focus on performance and user experience.",
+
+  "I assist businesses by developing custom software solutions tailored to their needs, whether creating new applications or enhancing existing ones. My approach emphasizes scalability, maintainability, and long-term growth.",
+
+  "Leveraging modern technologies like React, Node.js, and MongoDB, I aim to deliver seamless, responsive, and high-quality user experiences, adhering to best practices and industry standards."
 ];
+
+
 
 export const workExp = [
   {
-    place: "Self-Employed, Brisbane",
-    tenure: "Aug 2014 - Sep 2016",
-    role: "Visual Designer",
+    place: "Viswin Global",
+    tenure: "July 2024 - Sept 2024",
+    role: "Frontend Developer Intern",
+    link:"https://viswinglobal.com",
+    certificate:"drivelink",
     detail:
-      "A visual desginer dsesign for a variety of platoforms, may include internet and internet sites, games, movies, kioasks and wearbies. In short, they create the concepts",
+      "Developed responsive user interfaces and secure APIs using the MERN stack. Collaborated with a team to enhance web applications and ensure seamless deployment.",
   },
   {
-    place: "New Man Services",
-    tenure: "Aug 2014 - Sep 2016",
-    role: "UI/UX Designer",
+    place: "Better Tomorrow",
+    tenure: "Feb 2024 - Mar 2024",
+    role: "MERN Stack Developer Intern",
+    link:"https://thebettertomorrow.in",
+    certificate:"drivelink",
     detail:
-      "A visual desginer dsesign for a variety of platoforms, may include internet and internet sites, games, movies, kioasks and wearbies. In short, they create the concepts",
+      "Leveraged the MERN stack to develop secure APIs and robust database connections for user authentication. Worked closely with a team to create dynamic web applications through effective collaboration.",
   },
   {
-    place: "Global Solution",
-    tenure: "Aug 2014 - Sep 2016",
-    role: "Sr. Product Designer",
+    place: "Sri Eshwar College of Engineering",
+    tenure: "2022 - 2026",
+    role: "B.Tech in Information Technology",
+    link:"https://sece.ac.in",
     detail:
-      "A visual desginer dsesign for a variety of platoforms, may include internet and internet sites, games, movies, kioasks and wearbies. In short, they create the concepts",
+      "Pursuing a Bachelor's degree in Information Technology with a current CGPA of 8.30 (up to the 2nd semester). Gaining in-depth knowledge in core subjects like Data Structures, Algorithms, and Object-Oriented Programming while participating in projects and hackathons.",
   },
+  {
+    place: "Vivek Vidyalaya Higher Secondary School",
+    tenure: "2020 - 2022",
+    role: "HSC - Higher Secondary Certificate",
+    detail:
+      "Completed Higher Secondary School with a focus on Mathematics and Science, securing a score of 91.5%. Developed a strong foundation in analytical and problem-solving skills.",
+  },
+  {
+    place: "Vivek Vidyalaya Higher Secondary School",
+    tenure: "2019 - 2020",
+    role: "SSLC - Secondary School Leaving Certificate",
+    detail:
+      "Achieved a score of 88.6% in Secondary School, focusing on core subjects like Mathematics, Science, and Language, which laid the groundwork for further studies in technology.",
+  }
 ];
+
 
 export const comments = [
   {

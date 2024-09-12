@@ -1,24 +1,18 @@
+import { WhatDoIHelp } from "../../utils/data";
 import React, { useState } from 'react';
-import css from './Experties.module.scss';
 import { motion } from 'framer-motion';
-import { fadeIn, staggerContainer, textVariant } from '../../utils/motion.js';
-import { WhatDoIHelp } from '../../utils/data.js';
-import { FaNodeJs, FaReact, FaAws } from 'react-icons/fa';
+import css from './Experties.module.scss'; // Custom CSS module
+import { FaReact, FaAws } from 'react-icons/fa';
 import {
-  SiMongodb, SiExpress, SiJavascript, SiJava, SiPython, SiHtml5, SiCss3,
+  SiMongodb, SiExpress, SiJavascript, SiJava, SiPython, SiHtml5, SiCss3, SiC,
   SiDjango, SiTailwindcss, SiVisualstudiocode, SiGithub, SiGit,
   SiBitbucket, SiVirtualbox, SiCanva, SiMicrosoftoffice, SiEclipseide, SiPycharm,
   SiPostman, SiMicrosoftazure
 } from 'react-icons/si';
 
-// Example icon for core competencies
-const SiDatastructure = SiJavascript; // Replace with actual icons if available
-const SiAlgorithm = SiJavascript; // Replace with actual icons if available
-const SiOop = SiJavascript; // Replace with actual icons if available
-
 const skillsData = {
   Languages: [
-    { name: 'C', icon: SiJavascript, bg: '#F7DF1E' },
+    { name: 'C', icon: SiC, bg: '#F7DF1E' },
     { name: 'Python', icon: SiPython, bg: '#3776AB' },
     { name: 'Java', icon: SiJava, bg: '#007396' },
     { name: 'HTML', icon: SiHtml5, bg: '#E34F26' },
@@ -26,9 +20,9 @@ const skillsData = {
     { name: 'JavaScript', icon: SiJavascript, bg: '#F7DF1E' },
   ],
   'Core Competencies': [
-    { name: 'Data Structures', icon: SiDatastructure, bg: '#4285F4' },
-    { name: 'Algorithms', icon: SiAlgorithm, bg: '#DB4437' },
-    { name: 'OOPS', icon: SiOop, bg: '#F4B400' },
+    { name: 'Data Structures', icon: SiJavascript, bg: '#4285F4' },
+    { name: 'Algorithms', icon: SiJavascript, bg: '#DB4437' },
+    { name: 'OOPS', icon: SiJavascript, bg: '#F4B400' },
   ],
   Frameworks: [
     { name: 'Django', icon: SiDjango, bg: '#092E20' },
@@ -61,12 +55,12 @@ const skillsData = {
 };
 
 const tabs = [
-  { key: 'Languages', icon: SiJavascript },
-  { key: 'Core Competencies', icon: SiDatastructure },
-  { key: 'Frameworks', icon: SiDjango },
-  { key: 'Libraries', icon: FaReact },
-  { key: 'Tools', icon: SiVisualstudiocode },
-  { key: 'Cloud Tools', icon: FaAws },
+  { key: 'Languages', label: 'Languages', icon: SiJavascript },
+  { key: 'Core Competencies', label: 'Core Competencies', icon: SiJavascript },
+  { key: 'Frameworks', label: 'Frameworks', icon: SiDjango },
+  { key: 'Libraries', label: 'Libraries', icon: FaReact },
+  { key: 'Tools', label: 'Tools', icon: SiVisualstudiocode },
+  { key: 'Cloud Tools', label: 'Cloud Tools', icon: FaAws },
 ];
 
 const Experties = () => {
@@ -74,63 +68,63 @@ const Experties = () => {
 
   return (
     <section className={css.wrapper}>
-      <a className="anchor" id="experties"></a>
       <motion.div
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-        className={`paddings yPaddings innerWidth flexCenter ${css.container}`}
+        className={css.highlightSection}
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
       >
-        {/* Left Side - Tabs and Skills */}
-        <div className={css.leftSide}>
-          <div className={css.tabs}>
-            {tabs.map((tab, i) => (
-              <div
-                key={i}
-                className={`${css.tab} ${activeTab === tab.key ? css.activeTab : ''}`}
-                onClick={() => setActiveTab(tab.key)}
-              >
-                <tab.icon />
-              </div>
-            ))}
-          </div>
-          <div className={css.skills}>
-            {skillsData[activeTab].map((skill, i) => (
-              <motion.div
-                variants={fadeIn('up', 'tween', (i + 1) * 0.2, 1)}
-                className={css.skill}
-                key={i}
-              >
-                <skill.icon />
-                <span>{skill.name}</span>
-              </motion.div>
-            ))}
-          </div>
+        <div className={css.profileSummary}>
+          <span className="primaryText">Know About Me!</span>
+          {WhatDoIHelp.map((item, index) => (
+            <p key={index} className={css.secondaryText}>{item}</p>
+          ))}
         </div>
 
-        {/* Right Side - What Do I Help */}
-        <motion.div
-          variants={textVariant(0.5)}
-          className={css.rightSide}
-        >
-          <span className="primaryText">What do I help?</span>
-          {WhatDoIHelp.map((paragraph, i) => (
-            <span className={css.secondaryText} key={i}>{paragraph}</span>
-          ))}
-
-          <div className={`flexCenter ${css.stats}`}>
-            <div className={`flexCenter ${css.stat}`}>
-              <span className="primaryText">285+</span>
-              <span className="secondaryText">Project Completed</span>
-            </div>
-            <div className={`flexCenter ${css.stat}`}>
-              <span className="primaryText">190+</span>
-              <span className="secondaryText">Happy Clients</span>
-            </div>
-          </div>
-        </motion.div>
       </motion.div>
+      {/* Top Bar with Tabs */}
+      <span className="primaryText" style={{alignSelf:"center"}}>What I Know?</span>
+      <div className={css.topBar}>
+        {tabs.map((tab) => (
+          <motion.div
+            key={tab.key}
+            onClick={() => setActiveTab(tab.key)}
+            whileHover={{ scale: 1.1 }}
+            className={`${css.tabButton} ${activeTab === tab.key ? css.activeTab : ''}`}
+          >
+            <tab.icon />
+            <span>{tab.label}</span>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Main Content Area */}
+      <div className={css.mainContent}>
+        <motion.div
+          key={activeTab}
+          className={css.skillsGrid}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          {skillsData[activeTab].map((skill, i) => (
+            <motion.div
+              key={i}
+              className={css.skillCard}
+              whileHover={{ scale: 1.05 }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+            >
+              <skill.icon className={css.skillIcon} style={{ background: skill.bg }} />
+              <span>{skill.name}</span>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
+      {/* Highlight Section */}
+      
     </section>
   );
 };

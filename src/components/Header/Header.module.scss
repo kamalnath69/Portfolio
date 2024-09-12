@@ -133,6 +133,9 @@
       }
 
       @media (max-width: $sm) {
+        .buyMeCoffee {
+          margin-right: 20px;
+        }
         .coffeeText {
           display: none;
         }

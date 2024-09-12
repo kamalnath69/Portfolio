@@ -1,133 +1,138 @@
 @import '../../styles/contants.scss';
 
 .wrapper {
-  background: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #f5f5f5;
 
-  .container {
-    align-items: flex-start;
-    gap: 2rem;
-    flex-wrap: wrap;
+  .topBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #effaf3;
+    padding: 1rem;
+    border: 3px solid $secondary; /* Replace with the color you want */
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */  
 
-    > div {
-      flex: 1;
-    }
-
-    .leftSide {
+    .tabButton {
+      cursor: pointer;
       display: flex;
-      flex-direction: row;
-      gap: 2rem;
+      align-items: center;
+      color: $primary;
+      transition: all 0.3s ease;
+      margin: 0.5rem;
 
-      .tabs {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-
-        .tab {
-          width: 60px;
-          height: 60px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          background: $secondary;
-          border-radius: 50%;
-          transition: background 200ms ease;
-
-          svg {
-            width: 30px;
-            height: 30px;
-            color: $primary;
-          }
-
-          &:hover {
-            background: $primary;
-          }
-        }
-
-        .activeTab {
-          background: $primary;
-          svg {
-            color: white;
-          }
-        }
+      &.activeTab {
+        font-weight: bold;
       }
 
-      .skills {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+      svg {
+        font-size: 1.5rem;
+        margin-right: 0.5rem;
+      }
 
-        .skill {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          gap: 0.5rem;
-          border-radius: 50%;
-          padding: 1.25rem;
-          background: white;
-          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-          transition: all 200ms ease-out;
-
-          &:hover {
-            cursor: pointer;
-            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
-            transform: scale(1.05);
-          }
-
-          > svg {
-            width: 40px;
-            height: 40px;
-            color: $primary;
-          }
-
-          > span {
-            font-size: 1rem;
-            color: $secondary;
-            text-align: center;
-          }
-        }
+      span {
+        font-size: 1rem;
+        font-weight: 600;
       }
     }
   }
 
-  .rightSide {
-    .primaryText {
-      font-size: 2rem;
-      color: $primary;
-      font-weight: bold;
-    }
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
 
-    .secondaryText {
-      font-size: 1.25rem;
-      color: $secondary;
-      margin-top: 1rem;
-      line-height: 1.5;
-    }
-
-    .stats {
-      margin-top: 2rem;
+    .skillsGrid {
       display: flex;
-      gap: 3rem;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
 
-      .stat {
+    .skillCard {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      flex: 1 1 150px;
+
+      .skillIcon {
+        font-size: 2rem;
+        border-radius: 50%;
+        padding: 0.5rem;
         display: flex;
-        flex-direction: column;
         align-items: center;
-        gap: 0.5rem;
+        justify-content: center;
+        background: #f0f0f0;
+      }
 
-        .primaryText {
-          font-size: 2rem;
-          color: $primary;
-          font-weight: bold;
-        }
+      span {
+        margin-top: 1rem;
+        font-size: 1rem;
+        color: #333;
+        text-align: center;
+      }
+    }
+  }
 
-        .secondaryText {
+  .highlightSection {
+    background-color: #fff;
+    padding: 2rem;
+    padding-right:5rem;
+    padding-left:5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 0 10rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+
+    .profileSummary {
+      margin-bottom: 2rem;
+      text-align: center;
+
+      .primaryText {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      .secondaryText {
+        @media (max-width: $sm) {
           font-size: 1rem;
-          color: $secondary;
+          line-height: 40px;
         }
+        line-height: 40px;
+        color:$secondary;
+        font-size: 1.1rem;
+        font-weight: 500
+      }
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    .topBar {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .mainContent {
+      .highlightSection {
+        max-width: none;
+        margin-top: 1rem;
       }
     }
   }
 }
-
