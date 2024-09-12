@@ -26,7 +26,7 @@ const Hero = () => {
             <br />
             <span className={css.typingEffect}>
               <Typewriter
-                words={["a MERN Stack Developer", "a Creative Designer", "a Tech Enthusiast", "a Problem Solver"]}
+                words={["a MERN Developer", "a Creative Designer", "a Tech Enthusiast", "a Problem Solver"]}
                 loop={true}
                 cursor
                 cursorStyle="|"

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import css from "./Header.module.scss";
-import { BiPhoneCall, BiMenuAltRight } from "react-icons/bi";
+import { BiPhoneCall, BiMenuAltRight, BiCoffee } from "react-icons/bi";  // Import the coffee icon
 import { motion } from "framer-motion";
 import { getMenuStyles, headerVariants } from "../../utils/motion";
 import useOutsideAlerter from "../../hooks/useOutsideAlerter";
@@ -33,7 +33,6 @@ const Header = () => {
       >
         <div className={`innerWidth ${css.container}`}>
           <div className={css.name}>
-            <img src="/vkLogo.png" alt="Logo" className={css.logo} />
             Kamal Nath
           </div>
           <ul
@@ -51,7 +50,8 @@ const Header = () => {
             </li>
           </ul>
           <button className={css.buyMeCoffee} onClick={openModal}>
-            Buy Me a Coffee
+            <BiCoffee className={css.coffeeIcon} />
+            <span className={css.coffeeText}>Buy Me a Coffee</span>
           </button>
           <div
           className={css.menuIcon}

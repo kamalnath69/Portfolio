@@ -19,6 +19,9 @@
       flex-wrap: wrap;
 
       .typingEffect {
+        @media (max-width: $sm) {
+          font-size: 1.5rem;
+        }
         display: block;
         font-size: 2rem;
         color: #00bfa5;
@@ -84,7 +87,7 @@
 
       img {
         @media (max-width: $sm) {
-          width: 18rem;
+          width: 20rem;
         }
         width: 28rem;
         margin-bottom: -5px;

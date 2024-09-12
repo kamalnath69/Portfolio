@@ -20,11 +20,10 @@
       font-weight: 500;
       display: flex;
       align-items: center;
-      @media (max-width: $sm), (max-width: $md) {
+      @media (max-width: $sm), (max-width: $md),(max-width: 1000px) {
         font-size: 1rem;
         font-weight: bold;
       }
-      
 
       .logo {
         width: 30px;
@@ -36,7 +35,7 @@
     .menu {
       display: flex;
       justify-content: center;
-      flex: 1; /* This makes the ul take up available space */
+      flex: 1;
 
       @media (max-width: $sm), (max-width: $md) {
         position: absolute;
@@ -100,17 +99,43 @@
     }
 
     .buyMeCoffee {
-      margin-left: auto; /* Aligns button to the right */
+      margin-left: auto;
       padding: 0.5rem 1rem;
       background-color: $secondary;
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       transition: all 0.3s ease;
 
       &:hover {
         background-color: $primary;
+      }
+
+      .coffeeIcon {
+        font-size: 1.2rem;
+      }
+
+      .coffeeText {
+        @media (max-width: $md) {
+          display: none;
+        }
+      }
+
+      @media (max-width: $md) {
+        padding: 0.5rem;
+        .coffeeIcon {
+          margin-right: 0;
+        }
+      }
+
+      @media (max-width: $sm) {
+        .coffeeText {
+          display: none;
+        }
       }
     }
   }
