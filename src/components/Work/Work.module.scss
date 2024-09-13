@@ -49,8 +49,7 @@
         flex-direction: column;
         gap: 1.4rem;
         left: 45%;
-
-        // Progress line with colors matching the website's palette
+      
         .line {
           position: absolute;
           height: 95%;
@@ -64,176 +63,68 @@
           border-radius: 8px;
           box-shadow: 0px 0px 10px rgba(13, 47, 63, 0.7), 0px 0px 20px rgba(40, 111, 108, 0.5);
         }
-
-        // Circles with updated colors and effects
+      
         > div {
-          flex: 1;.wrapper {
-            .container {
-              flex-direction: column;
-              gap: 2rem;
-          
-              .experiences {
-                width: 100%;
-                flex-direction: column;
-                gap: 1.4rem;
-                position: relative;
-          
-                .exp {
-                  width: 100%;
-                  justify-content: space-between;
-                  line-height: 40px;
-                  align-items: flex-start;
-          
-                  > div {
-                    flex: 1;
-                  }
-          
-                  .role {
-                    margin-left: 2rem;
-                  }
-          
-                  .link {
-                    display: inline-block;
-                    margin-top: 0.5rem;
-                    color: #3498db;
-                    text-decoration: none;
-                    font-weight: 500;
-          
-                    &:hover {
-                      text-decoration: underline;
-                      color: #2c82c9;
-                    }
-                  }
-                }
-          
-                .progressbar {
-                  position: absolute;
-                  height: 100%;
-                  display: flex;
-                  flex-direction: column;
-                  gap: 1.4rem;
-                  left: 45%;
-          
-                  // Progress line with updated color palette matching purple and yellow theme
-                  .line {
-                    position: absolute;
-                    height: 95%;
-                    width: 4px;
-                    background: linear-gradient(180deg, #8A2BE2, #FFD700, #9370DB);  /* Updated Gradient */
-                    background-size: 100% 300%;
-                    background-position: 0 0;
-                    animation: gradientFlow 3s ease-in-out infinite;
-                    left: 42%;
-                    z-index: 1;
-                    border-radius: 8px;
-                    box-shadow: 0px 0px 10px rgba(138, 43, 226, 0.7), 0px 0px 20px rgba(255, 215, 0, 0.5);  /* Updated Shadow */
-                  }
-          
-                  // Circles with updated background colors and glow effects
-                  > div {
-                    flex: 1;
-                    padding-top: 0.8rem;
-                    z-index: 2;
-          
-                    .circle {
-                      border-radius: 10%;
-                      width: 1.5rem;
-                      height: 1.5rem;
-                      display: flex;
-                      justify-content: center;
-                      align-items: center;
-                      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
-                      transition: transform 0.4s ease, box-shadow 0.4s ease;
-          
-                      &:hover {
-                        transform: scale(1.3);
-                        box-shadow: 0 0 16px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 255, 255, 0.4);
-                      }
-          
-                      // Different circle styles with matching purple and yellow palette
-                      &:nth-child(1) {
-                        background: radial-gradient(circle, #8A2BE2, #9370DB);  /* Darker Purple */
-                        box-shadow: 0 0 10px rgba(138, 43, 226, 0.7), 0 0 20px rgba(147, 112, 219, 0.5);  /* Purple Shadow */
-                      }
-          
-                      &:nth-child(2) {
-                        background: radial-gradient(circle, #FFD700, #FFFACD);  /* Yellow */
-                        box-shadow: 0 0 10px rgba(255, 215, 0, 0.7), 0 0 20px rgba(255, 250, 205, 0.5);  /* Yellow Glow */
-                      }
-          
-                      &:nth-child(3) {
-                        background: radial-gradient(circle, #9370DB, #E6E6FA);  /* Lighter Purple */
-                        box-shadow: 0 0 10px rgba(147, 112, 219, 0.7), 0 0 20px rgba(230, 230, 250, 0.5);  /* Light Purple Glow */
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-          
-          // Keyframe animation for the gradient flow in the progress line
-          @keyframes gradientFlow {
-            0% {
-              background-position: 0 0;
-            }
-            50% {
-              background-position: 0 100%;
-            }
-            100% {
-              background-position: 0 0;
-            }
-          }
-          
+          flex: 1;
           padding-top: 0.8rem;
           z-index: 2;
-
-          .circle {
-            border-radius: 10%;
-            width: 1.5rem;
-            height: 1.5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 0 12px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-
-            &:hover {
-              transform: scale(1.1);
-              box-shadow: 0 0 16px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 255, 255, 0.4);
-            }
-
-            // Different styles for each circle using gradients based on the website colors
-            &:nth-child(1) {
-              background: radial-gradient(circle, #0D2F3F, #286F6C);
-              box-shadow: 0 0 10px rgba(13, 47, 63, 0.7), 0 0 20px rgba(40, 111, 108, 0.5);
-            }
-
-            &:nth-child(2) {
-              background: radial-gradient(circle, #286F6C, #E7E7E7);
-              box-shadow: 0 0 10px rgba(40, 111, 108, 0.7), 0 0 20px rgba(231, 231, 231, 0.5);
-            }
-
-            &:nth-child(3) {
-              background: radial-gradient(circle, #E7E7E7, #0D2F3F);
-              box-shadow: 0 0 10px rgba(231, 231, 231, 0.7), 0 0 20px rgba(13, 47, 63, 0.5);
-            }
+          position: absolute;
+          width: 100%;
+        }
+      
+        .circle {
+          border-radius: 50%;
+          width: 1.5rem;
+          height: 1.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0 0 12px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+          position: absolute;
+          left: calc(50% - 0.75rem);
+          animation: moveUpDown 4s linear infinite;
+      
+          &:nth-child(1) {
+            background: radial-gradient(circle, #0D2F3F, #286F6C);
+            top: 10%;
           }
+      
+          &:nth-child(2) {
+            background: radial-gradient(circle, #286F6C, #E7E7E7);
+            top: 50%;
+          }
+      
+          &:nth-child(3) {
+            background: radial-gradient(circle, #E7E7E7, #0D2F3F);
+            top: 90%;
+          }
+        }
+      }
+      
+      // Keyframes for up and down movement of the circles
+      @keyframes moveUpDown {
+        0% {
+          top: 0%;
+        }
+        50% {
+          top: 100%;
+        }
+        100% {
+          top: 0%;
+        }
+      }
+      
+      @keyframes gradientFlow {
+        0% {
+          background-position: 0 0;
+        }
+        50% {
+          background-position: 0 100%;
+        }
+        100% {
+          background-position: 0 0;
         }
       }
     }
   }
-}
-
-// Keyframe animation for the gradient flow in the progress line
-@keyframes gradientFlow {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 0 100%;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
+}      
