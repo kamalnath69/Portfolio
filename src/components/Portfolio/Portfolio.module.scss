@@ -1,40 +1,146 @@
 @import '../../styles/contants.scss';
 
-.wrapper{
-    background: white;
-    overflow: hidden;
-    .container{
-        flex-direction: column;
-        gap: 2rem;
-        .heading{
-            width: 100%;
-            justify-content: space-between;
-            align-items: flex-end;
-            flex-wrap: wrap; 
-            >:nth-child(2)
-            {
-                text-decoration: underline;
-                color: orange;
-                cursor: pointer;
-            }
-        }    
-        
-        .showCase{
-            width: 100%;
-            gap: 1.5rem;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            >img{
-
-                @media (max-width: $sm) {
-                    width: 100%;
-                }
-                border-radius: 20px;
-                max-width: 25rem;
-                max-height: 18rem;
-                box-shadow: 0px 21px 13px rgba(0, 0, 0, 13%);
-                cursor: pointer;
-            }
-        }
+.wrapper {
+  background: white;
+  overflow: hidden;
+  .container {
+    flex-direction: column;
+    gap: 2rem;
+    .heading {
+      width: 100%;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      > :nth-child(2) {
+        text-decoration: underline;
+        color: orange;
+        cursor: pointer;
+      }
     }
+
+    .showCase {
+      width: 100%;
+      gap: 1.5rem;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      > img {
+        @media (max-width: $sm) {
+          width: 100%;
+        }
+        border-radius: 20px;
+        max-width: 25rem;
+        max-height: 18rem;
+        box-shadow: 0px 21px 13px rgba(0, 0, 0, 13%);
+        cursor: pointer;
+      }
+    }
+  }
 }
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modalContent {
+    background: white;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .modalBody {
+    display: flex;
+    flex-direction: row;
+    @media (max-width: $sm) {
+      flex-direction: column;
+    }
+  
+    .imagesSection {
+      width: 60%;
+      padding: 1rem;
+      .horizontalScroll {
+        display: flex;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        gap: 1rem;
+        scrollbar-width: none; /* Firefox */
+        &::-webkit-scrollbar {
+          display: none; /* Chrome, Safari */
+        }
+        img {
+          max-width: 100%;
+          border-radius: 10px;
+          flex-shrink: 0;
+        }
+      }
+    }
+  
+    .descriptionSection {
+      width: 40%;
+      padding: 1rem;
+      .verticalScroll {
+        max-height: 400px;
+        overflow-y: scroll;
+        scrollbar-width: none; /* Firefox */
+        &::-webkit-scrollbar {
+          display: none; /* Chrome, Safari */
+        }
+        h2 {
+          font-size: 1.8rem;
+          color: #333;
+          margin-bottom: 1rem;
+        }
+        h3 {
+          font-size: 1.4rem;
+          color: #555;
+          margin-top: 1rem;
+        }
+        p, ul {
+          font-size: 1rem;
+          line-height: 1.6;
+          color: #333;
+        }
+        ul {
+          padding-left: 1.2rem;
+          li {
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    border: none;
+    background: #ff6f61;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    line-height: 1;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  
+    &:hover {
+      background-color: #e55b4f;
+    }
+  }
+  
