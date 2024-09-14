@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import css from "./Contact.module.scss";
-import { FaEnvelope,FaMale , FaWhatsapp, FaPhone,FaTag, FaPaperPlane , FaSpinner } from 'react-icons/fa';
+import { FaUser, FaEnvelope, FaWhatsapp, FaPhone, FaTag, FaPaperPlane , FaSpinner } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +15,11 @@ const Contact = () => {
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [showQR, setShowQR] = useState(false); // State for QR popup
+
+  const handleRedirection = () => {
+    window.open("https://wa.me/qr/HH7A3DGBJ2T3D1", "_blank");
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -60,9 +65,10 @@ const Contact = () => {
         <p className={css.subtitle}>We'd love to hear from you. Drop us a message, and we'll get back to you!</p>
 
         <div className={css.contactContent}>
+          
           <form onSubmit={handleSubmit} className={css.contactForm}>
             <div className={css.inputGroup}>
-              <FaMale className={css.icon} />
+              <FaUser className={css.icon} />
               <input 
                 type="text" 
                 name="fullname" 
@@ -122,10 +128,18 @@ const Contact = () => {
           </form>
 
           <div className={css.contactDetails}>
-            <FaWhatsapp className={css.largeIcon} />
+          <div className={css.contactImage}>
+            <img src="/contact.jpg" alt="Contact Us" />
+          </div>
+          <div>
+            <FaWhatsapp 
+              className={css.largeIcon} 
+              onClick={() => setShowQR(true)}  // Show QR popup on click
+            />
             <p>Reach out via WhatsApp for quicker responses.</p>
             <p><strong>Phone:</strong> +91 97878 67648</p>
             <p><strong>Email:</strong> kamalnath9669@gmail.com</p>
+          </div>
           </div>
         </div>
 
@@ -135,6 +149,20 @@ const Contact = () => {
               <button className={css.closeButton} onClick={() => setShowPopup(false)}>×</button>
               <h2>Thank You!</h2>
               <p>Your message has been sent. We will get back to you soon.</p>
+            </div>
+          </div>
+        )}
+
+        {showQR && (  // WhatsApp QR Popup
+          <div className={css.popupOverlay}>
+            <div className={css.popupContent}>
+              <button className={css.closeButton} onClick={() => setShowQR(false)}>×</button>
+              <h2>Kamal Nath WhatsApp</h2>
+              <img className={css.whatsappImg} src="/whatsapp.jpeg" alt="WhatsApp QR Code" />
+              <p>Scan this code using the WhatsApp camera to get my number or click below.</p>
+              <button className={css.redirectButton} onClick={handleRedirection}>
+                Click Here
+              </button>
             </div>
           </div>
         )}

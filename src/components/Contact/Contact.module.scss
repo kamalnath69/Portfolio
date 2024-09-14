@@ -15,22 +15,25 @@
   flex-direction: column;
   position: relative;
 
-  @media (max-width: $md) {
-    padding: 2rem;
+  @media (max-width: $md),(max-width: $sm) {
+    padding: 2rem 2rem;
   }
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: $primary;
   text-align: center;
   font-family: 'DM Serif Display', serif;
   margin-bottom: 1rem;
+  @media (max-width: $md) {
+    font-size: 2.5rem;
+  }
 }
 
 .subtitle {
-  font-size: 1.2rem;
-  color: $secondary;
+  font-size: 1.1rem;
+  color: $primary;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -48,8 +51,8 @@
 
 .contactForm {
   flex: 1;
-  margin-right: 2rem;
-
+  margin-right: 1rem;
+  
   @media (max-width: $md) {
     margin-right: 0;
   }
@@ -105,6 +108,7 @@
 
   .statusMessage {
     margin-top: 1rem;
+    font-weight: 500;
     font-size: 1rem;
     color: #e55b4f;
     text-decoration: underline;
@@ -114,13 +118,14 @@
 
 .contactDetails {
   flex: 1;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  @media (max-width: $sm), (max-width: $md) {
-    margin-top: 1rem;
-  }
+  margin-top: 1rem;
   .largeIcon {
     font-size: 3rem;
     color: #25D366;
+    cursor: pointer;
     margin-bottom: 1rem;
   }
 
@@ -129,6 +134,24 @@
     color: #555;
   }
 }
+/* New contact image styling */
+.contactImage {
+  flex: 1;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 12rem;
+    border-radius: 8px;
+  }
+
+  @media (max-width: $md) {
+    display: none;
+  }
+}
+
 
 .popupOverlay {
   position: fixed;
@@ -158,6 +181,29 @@
 
   p {
     margin-bottom: 1rem;
+  }
+}
+
+.whatsappImg {
+  width: 100%;
+  margin-bottom: 1rem;
+  border: 2px solid #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.redirectButton {
+  padding: 0.5rem 1.5rem;
+  background-color: $secondary;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+
+  &:hover {
+    background: darken($secondary, 10%);
   }
 }
 
