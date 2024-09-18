@@ -39,7 +39,7 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:5000/send-email", formData);
+      const response = await axios.post("https://email-whatsapp-z9yu.onrender.com/send-email", formData);
       if (response.status === 200) {
         setLoading(false);
         setShowPopup(true);

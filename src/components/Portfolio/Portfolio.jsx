@@ -10,7 +10,7 @@ const Portfolio = () => {
     {
       id: 1,
       title: "Digital Experience Project",
-      images: ["./showCase1.png", "./showCase1.png", "./showCase2.png"],
+      images: ["./si.png", "./si.png", "./si.png"],
       description: `
         <h3>Overview</h3>
         <p>This project focuses on enhancing digital experiences through modern UI/UX practices. We designed and developed a responsive website with sleek transitions and intuitive navigation.</p>
@@ -30,7 +30,7 @@ const Portfolio = () => {
     {
       id: 2,
       title: "Creative Portfolio",
-      images: ["./showCase2.png", "./showCase2-1.png"],
+      images: ["./si.png", "./si.png"],
       description: `
         <h3>Overview</h3>
         <p>This is a creative portfolio website for showcasing projects and creative work.</p>
@@ -47,7 +47,7 @@ const Portfolio = () => {
     {
       id: 3,
       title: "E-commerce Solution",
-      images: ["./showCase3.png", "./showCase3-1.png"],
+      images: ["./si.png", "./si.png"],
       description: `
         <h3>Overview</h3>
         <p>An e-commerce solution with an integrated payment gateway, product listings, and user reviews.</p>
@@ -99,7 +99,7 @@ const Portfolio = () => {
             <span className="primaryText">My Latest Works</span>
             <p style={{ marginTop: "10px" }}>Perfect solution for digital experience</p>
           </div>
-          <span className="secondaryText">Explore More Works</span>
+          <span className="secondaryText">More Works</span>
         </motion.div>
 
         <div className={`flexCenter ${css.showCase}`}>

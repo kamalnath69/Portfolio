@@ -1,5 +1,11 @@
 @import '../../styles/contants.scss';
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
+.extra{
+    text-decoration: underline;
+    color:rgb(122, 216, 27);
+    font-family: 'DM Serif Display', serif;
+}
 .wrapper{
     background: #effaf3;
     .container{
@@ -17,11 +23,6 @@
             >:nth-child(2)
             {
                 margin-top: 3rem;
-
-                a{
-                    text-decoration: underline;
-                    color: orange;
-                }
             }
         }
 

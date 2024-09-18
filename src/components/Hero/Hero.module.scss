@@ -1,45 +1,48 @@
 @import '../../styles/contants.scss';
 
 .wrapper {
-  overflow: hidden; 
+  overflow: hidden;
 
   .container {
     position: relative;
     z-index: 1;
 
     .upperElements {
-      @media (max-width: $sm) {
-        justify-content: center;
-        text-align: center;
-        gap: 2rem;
-      }
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
 
+      @media (max-width: $sm) {
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+      }
+
       .typingEffect {
-        @media (max-width: $sm) {
-          font-size: 1.5rem;
-        }
         display: block;
         font-size: 2rem;
         color: #00bfa5;
         margin-top: 10px;
         margin-bottom: 1rem;
+
+        @media (max-width: $sm) {
+          font-size: 1.5rem;
+        }
       }
     }
 
     .lowerElements {
+      margin-top: 12rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
       @media (max-width: $sm), (max-width: $md) {
         margin-top: 4rem;
         gap: 2rem;
         justify-content: center;
       }
-      margin-top: 12rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
 
       .experience {
         display: flex;
@@ -64,18 +67,6 @@
     }
 
     .person {
-      @media (max-width: $sm), (max-width: $md) {
-        position: relative;
-        left: 0;
-        background-size: 21rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-position: bottom center;
-      }
-      @media  (max-width: $md){
-        background-size: 28rem;
-      }
       position: absolute;
       bottom: -2rem;
       left: 33%;
@@ -85,43 +76,62 @@
       background-size: 30rem;
       background-position: center;
 
+      @media (max-width: $sm), (max-width: $md) {
+        position: relative;
+        left: 0;
+        background-size: 21rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-position: bottom center;
+      }
+
+      @media (max-width: $md) {
+        background-size: 28rem;
+      }
+
       img {
+        width: 28rem;
+        margin-bottom: -5px;
+
         @media (max-width: $sm) {
           width: 20rem;
         }
-        width: 28rem;
-        margin-bottom: -5px;
       }
-    }
 
-    .popup-trigger {
-      position: absolute;
-      top: 60%; /* Adjust the position based on the issue area */
-      left: 45%; /* Adjust the position based on the issue area */
-      width: 20px;
-      height: 20px;
-      cursor: pointer;
-      background: transparent;
-      border: none;
-    }
-    
-    .popup {
-      position: absolute;
-      top: 50%; /* Adjust position */
-      left: 50%; /* Adjust position */
-      transform: translate(-50%, -50%);
-      background: #fff;
-      border: 1px solid #ccc;
-      padding: 10px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      display: none;
-    }
-    
-    .popup-trigger:hover ~ .popup,
-    .popup-trigger:focus ~ .popup {
-      display: block;
-    }
+      // Dot trigger styles
+      .dotTrigger {
+        position: absolute;
+        top: 61.5%; /* Adjust this to match the dot's vertical position */
+        left: 28%; /* Adjust this to match the dot's horizontal position */
+        width: 27px;
+        height: 27px;
+        background: transparent;
+        border: none;
+        @media (max-width: $sm) {
+          width: 21px;
+          height: 21px;
+        }
+      }
+      //background: url('/popUpImg.png') no-repeat center center;
+      // Chat bubble-style popup using background image
+      .popup {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+        text-align: center;
+        width: 100px; /* Adjust the size as needed */
+        height: 100px; /* Adjust the size as needed */
+        background: url('/popUpImg.png') no-repeat center center;
+        background-size: contain;
+        top: 42.5%; /* Adjust the position */
+        left: 23%; /* Adjust the position */
+        padding: 20px;
+      }
+
+}
 
     .contactInfo {
       display: flex;
@@ -139,6 +149,7 @@
         font-size: 1rem;
         gap: 2rem;
         color: #0D2F3F;
+
         @media (max-width: $sm) {
           display: block;
         }
