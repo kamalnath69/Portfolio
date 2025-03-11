@@ -75,34 +75,33 @@ export const workExp = [
   }
 ];
 
-
 export const comments = [
   {
-    name: "Rajesh Kannan",
+    name: "Dr. Prasantha Bharathi",
+    post: "Mathematics Professor",
+    comment:
+      "Kamal demonstrated exceptional technical skills in developing our International Mathematics Conference website. His attention to detail and ability to translate complex requirements into a user-friendly platform was impressive.",
+    img: "./person1.jpg",
+  },
+  {
+    name: "Prakash Utharaj",
+    post: "Technical Mentor",
+    comment:
+      "As Kamal's mentor, I've witnessed his remarkable growth in full-stack development. His innovative approach to problem-solving and quick adaptation to new technologies makes him stand out as a developer.",
+    img: "./person1.jpg",
+  },
+  {
+    name: "Rajesh Kumar",
+    post: "Project Lead",
+    comment:
+      "Working with Kamal on various projects has been a pleasure. His commitment to delivering high-quality code and ability to meet deadlines consistently makes him a valuable asset to any team.",
+    img: "./person1.jpg",
+  },
+  {
+    name: "Anitha Krishnan",
     post: "Senior Developer",
     comment:
-      "An exceptional learner with a keen eye for detail. Their enthusiasm and dedication to mastering new technologies make them a valuable team player.",
-    img: "./person1.jpg",
-  },
-  {
-    name: "Sonal Mehra",
-    post: "Mentor & Lead Engineer",
-    comment:
-      "Their ability to grasp complex concepts quickly and their proactive approach to problem-solving set them apart as a promising developer.",
-    img: "./person1.jpg",
-  },
-  {
-    name: "Priya Ramesh",
-    post: "Project Coordinator",
-    comment:
-      "A highly motivated individual who brings fresh ideas to the table. Their collaborative spirit and eagerness to learn have been evident throughout our interactions.",
-    img: "./person1.jpg",
-  },
-  {
-    name: "Vikram Kumar",
-    post: "Tech Lead",
-    comment:
-      "Shows a strong aptitude for coding and a passion for continuous improvement. Always eager to take on new challenges and learn from them.",
+      "Kamal's passion for learning and implementing new technologies is commendable. His contributions to our team projects have always been thoughtful and well-executed.",
     img: "./person1.jpg",
   }
 ];
