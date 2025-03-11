@@ -40,10 +40,10 @@ const Header = () => {
             ref={menuRef}
             style={getMenuStyles(menuOpened)}
           >
-            <li><a href="#portfolio">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
+            <li><a href="#me">Me!</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Education</a></li>
+            <li><a href="#portfolio">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
             <li className={`flexCenter ${css.phone}`}>
               <BiPhoneCall size={"40px"} />

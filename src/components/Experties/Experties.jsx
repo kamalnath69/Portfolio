@@ -67,7 +67,7 @@ const Experties = () => {
   const [activeTab, setActiveTab] = useState(tabs[0].key);
 
   return (
-    <section className={css.wrapper}>
+    <section className={css.wrapper} id="about">
       <motion.div
         className={css.highlightSection}
         initial={{ opacity: 0, x: 50 }}

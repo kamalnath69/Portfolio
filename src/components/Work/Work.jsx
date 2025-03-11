@@ -58,6 +58,7 @@ const Work = () => {
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
       className={`paddings ${css.wrapper}`}
+      id='work'
     >
       <a className="anchor" id="work"></a>
       <div className={`innerWidth flexCenter ${css.container}`}>

@@ -8,7 +8,7 @@ const Hero = () => {
   const [showPopup, setShowPopup] = useState(false);
 
   return (
-    <section className={`paddings ${css.wrapper}`}>
+    <section className={`paddings ${css.wrapper}`} id='me'>
       <motion.div
         variants={staggerContainer}
         initial="hidden"

@@ -59,7 +59,7 @@ const Contact = () => {
   };
 
   return (
-    <div className={css.contactWrapper}>
+    <div className={css.contactWrapper} id='contact'>
       <div className={css.innerContainer}>
         <h1 className={css.title}>Get in Touch</h1>
         <p className={css.subtitle}>We'd love to hear from you. Drop us a message, and we'll get back to you!</p>
