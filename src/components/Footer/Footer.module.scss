@@ -34,6 +34,9 @@
                 >*{
                     display: block;
                 }
+                p {
+                    color: $primary; // Add this for contact info text
+                }
             }
             .menu{
                 @media (max-width: $sm) {
@@ -44,10 +47,17 @@
                 flex-direction: column;
                 gap: 2rem;
                 list-style: none;
-                li{
-                    cursor: pointer;
-                    &:hover{
-                        color: $secondary
+                li {
+                    a {
+                        text-decoration: none;
+                        color: $primary; // Set default link color
+                        transition: all 0.3s ease;
+                        font-weight: 500;
+                        
+                        &:hover{
+                            color: $secondary;
+                            transform: translateX(5px);
+                        }
                     }
                 }
             }

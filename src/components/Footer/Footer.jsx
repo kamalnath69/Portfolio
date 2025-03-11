@@ -34,10 +34,11 @@ const Footer = () => {
             <p>Coimbatore, Tamil Nadu, India</p>
           </div>
           <ul className={css.menu}>
-            <li>About Me</li>
-            <li>Projects</li>
-            <li>Connect</li>
-            <li>Education</li>
+          <li><a href="#me">Me!</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Education</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </motion.div>
